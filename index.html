@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FixItLocal | Report Local Problems</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🔧 FixItLocal
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#report">Report Problem</a>
+            <a href="#problems">Problems</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <a href="#report" class="nav-button">
+            Report Issue
+        </a>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                🏘️ Make Your Local Area Better
+            </span>
+
+            <h1>
+                See a Problem?
+                <span>Report It.</span>
+            </h1>
+
+            <p>
+                FixItLocal helps people report problems in their
+                neighborhoods and track them until they are resolved.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#report" class="primary-button">
+                    Report a Problem
+                </a>
+
+                <a href="#problems" class="secondary-button">
+                    View Problems
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="location-icon">
+                📍
+            </div>
+
+            <h3>Problems in Your Area</h3>
+
+            <p>
+                Help your community identify and solve
+                local problems faster.
+            </p>
+
+            <div class="mini-stat">
+
+                <div>
+                    <strong id="heroReported">0</strong>
+                    <span>Reported</span>
+                </div>
+
+                <div>
+                    <strong id="heroResolved">0</strong>
+                    <span>Resolved</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATISTICS ================= -->
+
+    <section class="stats-section">
+
+        <div class="stat-box">
+            <h2 id="totalProblems">0</h2>
+            <p>Problems Reported</p>
+        </div>
+
+        <div class="stat-box">
+            <h2 id="inProgressProblems">0</h2>
+            <p>In Progress</p>
+        </div>
+
+        <div class="stat-box">
+            <h2 id="resolvedProblems">0</h2>
+            <p>Problems Resolved</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>100%</h2>
+            <p>Community Driven</p>
+        </div>
+
+    </section>
+
+
+    <!-- ================= REPORT SECTION ================= -->
+
+    <section id="report" class="section">
+
+        <div class="section-heading">
+
+            <span>REPORT AN ISSUE</span>
+
+            <h2>
+                Help Make Your Neighborhood Better
+            </h2>
+
+            <p>
+                Found a problem in your area?
+                Tell us about it and help bring attention to the issue.
+            </p>
+
+        </div>
+
+
+        <div class="form-container">
+
+            <form id="problemForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="problemTitle">
+                            Problem Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="problemTitle"
+                            placeholder="Example: Broken streetlight"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="category">
+                            Category
+                        </label>
+
+                        <select id="category" required>
+
+                            <option value="">
+                                Select Category
+                            </option>
+
+                            <option value="Road">
+                                🛣️ Road
+                            </option>
+
+                            <option value="Streetlight">
+                                💡 Streetlight
+                            </option>
+
+                            <option value="Garbage">
+                                🗑️ Garbage
+                            </option>
+
+                            <option value="Water">
+                                🚰 Water
+                            </option>
+
+                            <option value="Electricity">
+                                ⚡ Electricity
+                            </option>
+
+                            <option value="Public Property">
+                                🏢 Public Property
+                            </option>
+
+                            <option value="Other">
+                                📌 Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="location">
+                            Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="location"
+                            placeholder="Example: Main Road, Kothrud"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="reporterName">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="reporterName"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="description">
+                        Problem Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        rows="5"
+                        placeholder="Describe the problem in detail..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="image">
+                        Problem Image
+                    </label>
+
+                    <input
+                        type="file"
+                        id="image"
+                        accept="image/*"
+                    >
+
+                    <small>
+                        Optional: Upload an image showing the problem.
+                    </small>
+
+                </div>
+
+
+                <button type="submit" class="submit-button">
+                    Submit Problem Report
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROBLEMS SECTION ================= -->
+
+    <section id="problems" class="section problems-section">
+
+        <div class="section-heading">
+
+            <span>COMMUNITY REPORTS</span>
+
+            <h2>
+                Recently Reported Problems
+            </h2>
+
+            <p>
+                See what problems people in the community have reported.
+            </p>
+
+        </div>
+
+
+        <div class="filter-container">
+
+            <input
+                type="text"
+                id="searchProblem"
+                placeholder="🔍 Search problems..."
+            >
+
+            <select id="filterCategory">
+
+                <option value="All">
+                    All Categories
+                </option>
+
+                <option value="Road">
+                    Road
+                </option>
+
+                <option value="Streetlight">
+                    Streetlight
+                </option>
+
+                <option value="Garbage">
+                    Garbage
+                </option>
+
+                <option value="Water">
+                    Water
+                </option>
+
+                <option value="Electricity">
+                    Electricity
+                </option>
+
+                <option value="Public Property">
+                    Public Property
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div id="problemList" class="problem-grid">
+
+            <!-- Problems will be added using JavaScript -->
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section class="how-section">
+
+        <div class="section-heading">
+
+            <span>HOW IT WORKS</span>
+
+            <h2>
+                Report. Track. Improve.
+            </h2>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>Report</h3>
+
+                <p>
+                    Tell us about a problem you noticed
+                    in your local area.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>Track</h3>
+
+                <p>
+                    Follow the status of reported problems
+                    as they move toward resolution.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>Improve</h3>
+
+                <p>
+                    Community awareness helps create
+                    cleaner and safer neighborhoods.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <section id="about" class="about-section">
+
+        <div class="about-content">
+
+            <span>ABOUT FIXITLOCAL</span>
+
+            <h2>
+                Small Reports Can Create Big Changes.
+            </h2>
+
+            <p>
+                FixItLocal is a community-focused platform designed
+                to make it easier for people to report and track
+                everyday problems in their local areas.
+            </p>
+
+            <p>
+                Whether it is a pothole, broken streetlight,
+                overflowing garbage bin, water leakage, or another
+                public issue, every report can help bring attention
+                to problems that need to be fixed.
+            </p>
+
+        </div>
+
+        <div class="about-highlight">
+
+            <div class="big-icon">
+                🤝
+            </div>
+
+            <h3>
+                Better Communities Start With Us
+            </h3>
+
+            <p>
+                Your voice can help make your neighborhood
+                cleaner, safer and better.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>🔧 FixItLocal</h3>
+
+                <p>
+                    Report local problems.
+                    Improve your community.
+                </p>
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+
+                <a href="#report">Report Problem</a>
+
+                <a href="#problems">Problems</a>
+
+                <a href="#about">About</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 FixItLocal. Built for the community.
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
